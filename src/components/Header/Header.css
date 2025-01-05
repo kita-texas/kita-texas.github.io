@@ -1,5 +1,5 @@
 .Header {
-    max-width: 100vw;
+    max-width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -12,7 +12,8 @@
 .name {
     color: var(--md-sys-color-on-primary);
     font-family: 'lobster';
-    font-size: 36px;
+    font-size: 2.5rem;
+    padding: 8px 16px;
 }
 
 .Header-items {

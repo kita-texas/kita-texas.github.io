@@ -29,7 +29,6 @@
 }
 
 .full-width-container {
-  padding: 8px;
   width: 100%;
 }
 .surface-container {
@@ -40,6 +39,11 @@
   color: var(--md-sys-color-on-primary);
 }
 
+.horizontal-padding-8 {
+  padding: 8px 0;
+}
+
+/** fonts **/
 .montserrat-500 {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;

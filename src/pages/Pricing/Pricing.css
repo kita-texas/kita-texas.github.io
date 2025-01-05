@@ -1,0 +1,16 @@
+.PlanCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 8px;
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+.grid-row4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
