@@ -1,5 +1,6 @@
 import React from "react";
 import './Pricing.css';
+import { School, BusinessCenterOutlined } from "@mui/icons-material";
 
 function Pricing() {
     return (
@@ -9,10 +10,10 @@ function Pricing() {
                 <p className="nunito-500" style={{ fontSize: "1.5rem" }}>See our various and afforable plans</p>
             </div>
             <div className="full-width-container horizontal-padding-8 grid-row4">
-                <PlanCard backgroundColor="blue" />
-                <PlanCard backgroundColor="red" />
-                <PlanCard backgroundColor="green" />
-                <PlanCard backgroundColor="yellow" />
+                <PlanCard planName="Weekly Cleaning" icon={<School sx={{fontSize: '48px'}} />} price={"$16/hr"}/>
+                <PlanCard planName="Monthly Cleaning" />
+                <PlanCard planName={"One Time"}/>
+                <PlanCard planName={"Deep Cleaning"} />
             </div>
         </div>
     )
@@ -20,11 +21,12 @@ function Pricing() {
 
 export default Pricing;
 
-function PlanCard({backgroundColor = "red"}) {
+function PlanCard({planName, icon= <BusinessCenterOutlined sx={{fontSize: "48px"}} />, backgroundColor = "var(--md-sys-color-primary-container)", price}) {
     return (
-        <div className="PlanCard" style={{backgroundColor: `${backgroundColor}`}}>
-            <p>$2000 / Session</p>
-            <p>Tutor</p>
+        <div className="PlanCard">
+            <h4 style={{backgroundColor: `${backgroundColor}`}}>{planName}</h4>
+            {icon}
+            <p>{price}</p>
         </div>
     )
 

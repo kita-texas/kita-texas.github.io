@@ -1,16 +1,22 @@
 .PlanCard {
-    display: flex;
     justify-content: center;
     flex-direction: column;
     width: 80%;
     margin: 8px;
-    padding: 2px 8px;
-    border-radius: 8px;
+    box-shadow: 0 0 4px 0px gray;
+}
+
+.PlanCard h4 {
+    margin: 0;
+    padding: 4px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'nunito', 'sans';
 }
 
 .grid-row4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
     justify-items: center;
+    
 }
