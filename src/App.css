@@ -31,6 +31,11 @@
 .full-width-container {
   width: 100%;
 }
+
+.secondary-color {
+  color: var(--md-sys-color-secondary)
+}
+
 .surface-container {
   background-color: var(--md-sys-color-surface-container);
 }
@@ -41,6 +46,10 @@
 
 .horizontal-padding-8 {
   padding: 8px 0;
+}
+
+.text-align-left {
+  text-align: left;
 }
 
 /** fonts **/
@@ -62,5 +71,12 @@
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
   font-weight: 500;
+  font-style: normal;
+}
+
+.nunito-600 {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   font-style: normal;
 }

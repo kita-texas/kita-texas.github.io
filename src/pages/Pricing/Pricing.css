@@ -6,17 +6,21 @@
     box-shadow: 0 0 4px 0px gray;
 }
 
-.PlanCard h4 {
+.PlanCard-h4 {
     margin: 0;
     padding: 4px 0;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     font-family: 'nunito', 'sans';
 }
 
-.grid-row4 {
+.PlanCard-p {
+    font-size: 1.75rem;
+}
+
+.grid-row3 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     
 }
