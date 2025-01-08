@@ -52,6 +52,10 @@
   text-align: left;
 }
 
+.pointer {
+  cursor: pointer
+}
+
 /** fonts **/
 .montserrat-500 {
   font-family: "Montserrat", serif;

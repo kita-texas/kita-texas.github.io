@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Homepage.css";
-import HelperCard from "../../components/HelperCard/HelperCard";
 import { Search, LocationOn, PersonSearch, ContactPage, CleaningServices, SupportAgent, FitnessCenter } from "@mui/icons-material";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; //CSS for Simple Datepicker
@@ -21,19 +20,7 @@ function Homepage() {
             <div id="Top-banner">
                 <div id="Top-banner-container">
                     <h1>Find Truested Cleaning Near You</h1>
-                    <div id="Top-banner-container-inputs">
-                        <input type="text" id="zip-code-input" maxLength={10} placeholder="Enter Zip Code" />
-                        <DatePicker
-                            selected={startDate}
-                            onChange={(date) => setStartDate(date)}
-                            showTimeSelect
-                            minDate={minDeservationDate}
-                            isClearable={true}
-                            dateFormat={"Pp"}
-                            placeholderText="Select date and starting time"
-                        />
-                        <button id="top-banner-search-btn" onClick={{}}><Search /></button>
-                    </div>
+                    <StartBookingInputs startDate={startDate} setStartDate={(date) => setStartDate(date)} minDeservationDate={minDeservationDate}/>
                 </div>
             </div>
             <div className="full-width-container horizontal-padding-8">
@@ -45,17 +32,17 @@ function Homepage() {
                         description="Enter your ZipCode and date to find available clearns"
                     />
                     <HowToCard
-                        icon={<PersonSearch sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)"}} /> }
+                        icon={<PersonSearch sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)" }} />}
                         heading="Choose your Cleaner"
                         description="Compare cleaners and choose a cleaner you want"
                     />
                     <HowToCard
-                        icon={<ContactPage sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)"}} /> }
+                        icon={<ContactPage sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)" }} />}
                         heading="Create a account"
                         description="Create or login to your account to finish checkout"
                     />
                     <HowToCard
-                        icon={<CleaningServices sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)"}} /> }
+                        icon={<CleaningServices sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)" }} />}
                         heading="Send booking request"
                         description="Send cleaning request to the cleaner and get cleaned"
                     />
@@ -66,12 +53,12 @@ function Homepage() {
                 <h1>Your Safety and Service Quality</h1>
                 <div className="how-to-steps">
                     <HowToCard
-                        icon={<SupportAgent sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)"}} /> }
+                        icon={<SupportAgent sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)" }} />}
                         heading="Contact Lines"
                         description="Support Phone Number and Email available during service hours"
                     />
                     <HowToCard
-                        icon={<FitnessCenter sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)"}} /> }
+                        icon={<FitnessCenter sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)" }} />}
                         heading="Trained Cleaners"
                         description="Well trained cleaners deliver the high quality serve as you expect"
                     />
@@ -84,6 +71,26 @@ function Homepage() {
 }
 
 export default Homepage;
+
+export function StartBookingInputs({startDate, setStartDate, minDeservationDate}) {
+    return (
+        <div className="StartBookingInputs">
+            <div id="Top-banner-container-inputs">
+                <input type="text" id="zip-code-input" maxLength={10} placeholder="Enter Zip Code" />
+                <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    showTimeSelect
+                    minDate={minDeservationDate}
+                    isClearable={true}
+                    dateFormat={"Pp"}
+                    placeholderText="Select date and starting time"
+                />
+                <button id="top-banner-search-btn" onClick={{}}><Search /></button>
+            </div>
+        </div>
+    )
+}
 
 function HowToCard({ icon, heading, description }) {
     return (

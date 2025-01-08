@@ -24,6 +24,11 @@
     margin: 0px 4px;
     gap: 20px;
     align-items: center;
+    
+    @media screen and (max-width: 770px) {
+        flex-direction: column;
+        
+    }
 }
 
 #Top-banner-container-inputs input {
@@ -41,6 +46,10 @@
     background-color: #0096FF;
     border-radius: 12px;
     padding: 12px 16px;
+
+    @media screen and (max-width: 770px) {
+        width: 70%;
+    }
 }
 
 .how-to-steps {
