@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import "./Homepage.css";
 import { Search, LocationOn, PersonSearch, ContactPage, CleaningServices, SupportAgent, FitnessCenter } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; //CSS for Simple Datepicker
 
 function Homepage() {
-    const minDeservationDate = new Date();
-    minDeservationDate.setDate(minDeservationDate.getDate() + 7);
-
-    const [startDate, setStartDate] = useState();
 
     const scrollTop = () => {
         document.documentElement.scrollTop = 0;
@@ -20,7 +17,7 @@ function Homepage() {
             <div id="Top-banner">
                 <div id="Top-banner-container">
                     <h1>Find Truested Cleaning Near You</h1>
-                    <StartBookingInputs startDate={startDate} setStartDate={(date) => setStartDate(date)} minDeservationDate={minDeservationDate}/>
+                    <StartBookingInputs />
                 </div>
             </div>
             <div className="full-width-container horizontal-padding-8">
@@ -63,7 +60,7 @@ function Homepage() {
                         description="Well trained cleaners deliver the high quality serve as you expect"
                     />
                 </div>
-                <button onClick={scrollTop} for="zip-code-input" className="scroll-top-btn">Start Booking</button>
+                <button onClick={scrollTop} className="scroll-top-btn">Start Booking</button>
             </div>
         </div>
 
@@ -72,11 +69,27 @@ function Homepage() {
 
 export default Homepage;
 
-export function StartBookingInputs({startDate, setStartDate, minDeservationDate}) {
+export function StartBookingInputs() {
+    const minDeservationDate = new Date();
+    minDeservationDate.setDate(minDeservationDate.getDate() + 7);
+
+    const [startDate, setStartDate] = useState();
+    const [zipCode, setZipCode] = useState();
+
+    const handleZipCodeChange = (event) => {
+        setZipCode(event.target.value);
+    }
+
+    const navigate = useNavigate();
+    const navigateToReservation = () => {
+        console.log(zipCode)
+        navigate('/reservation', { state: {zipCode: zipCode, date: startDate}})
+    }
+
     return (
         <div className="StartBookingInputs">
             <div id="Top-banner-container-inputs">
-                <input type="text" id="zip-code-input" maxLength={10} placeholder="Enter Zip Code" />
+                <input type="text" id="zip-code-input" onChange={handleZipCodeChange}  maxLength={10} placeholder="Enter Zip Code" />
                 <DatePicker
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
@@ -86,7 +99,7 @@ export function StartBookingInputs({startDate, setStartDate, minDeservationDate}
                     dateFormat={"Pp"}
                     placeholderText="Select date and starting time"
                 />
-                <button id="top-banner-search-btn" onClick={{}}><Search /></button>
+                <button id="top-banner-search-btn" onClick={navigateToReservation}><Search /></button>
             </div>
         </div>
     )

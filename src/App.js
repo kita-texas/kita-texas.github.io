@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage/Homepage.js';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import Pricing from './pages/Pricing/Pricing.js';
+import Reservation from './pages/Reservation/Reservation.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path='/plan' element={<Pricing />} />
+            <Route path='/reservation' element={<Reservation />} />
           </Routes>
         </div>
       </LocalizationProvider>

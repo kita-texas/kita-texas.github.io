@@ -56,6 +56,15 @@
   cursor: pointer
 }
 
+.grid-row3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  @media screen and (max-width: 950px) {
+      display: block
+  }
+}
+
 /** fonts **/
 .montserrat-500 {
   font-family: "Montserrat", serif;

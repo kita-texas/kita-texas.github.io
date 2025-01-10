@@ -1,31 +1,27 @@
-import {useState} from "react";
 import './Pricing.css';
-import { School, BusinessCenterOutlined } from "@mui/icons-material";
+import { BusinessCenterOutlined } from "@mui/icons-material";
 import { StartBookingInputs } from "../Homepage/Homepage";
+import { CleanerPlans, TutorPlans } from './PlanList';
 
 function Pricing() {
-    const minDeservationDate = new Date();
-    minDeservationDate.setDate(minDeservationDate.getDate() + 7);
-
-    const [startDate, setStartDate] = useState();
-
     return (
         <div className="Pricing">
             <div className="primary-container full-width-container horizontal-padding-8 centered-items">
                 <h1 className="montserrat-600" style={{ fontSize: "2.5rem" }}>Plans and Pricing</h1>
                 <p className="nunito-500" style={{ fontSize: "1.5rem" }}>See our various and afforable plans</p>
-                <StartBookingInputs startDate={startDate} setStartDate={(date) => setStartDate(date)} minDeservationDate={minDeservationDate} />
+                <StartBookingInputs />
             </div>
             <h1 className="text-align-left secondary-color" style={{ paddingLeft: "16px" }}>Cleaning Plans</h1>
             <div className="full-width-container horizontal-padding-8 grid-row3">
-                <PlanCard planName="Weekly Cleaning" icon={<School sx={{ fontSize: "48px", paddingTop: "8px" }} />} price={"From $16/hr"} />
-                <PlanCard planName={"One Time"} />
-                <PlanCard planName={"Deep Cleaning"} />
+                {
+                    CleanerPlans.map((plan) => <PlanCard key={plan.id} planName={`${plan.planName}`} icon={plan.icon} price={plan.price} />)
+                }
             </div>
             <h1 className="text-align-left secondary-color" style={{ paddingLeft: "16px" }}>Tutor Plans</h1>
             <div className="full-width-container horizontal-padding-8 grid-row3">
-                <PlanCard planName={"One Time"} backgroundColor="var(--md-sys-color-tertiary-container" />
-                <PlanCard planName={"Deep Cleaning"} backgroundColor="var(--md-sys-color-tertiary-container" />
+                {
+                    TutorPlans.map((plan) => <PlanCard key={plan.id} planName={`${plan.planName}`} icon={plan.icon} backgroundColor={plan.backgroundColor} price={plan.price} />)
+                }
             </div>
         </div>
     )

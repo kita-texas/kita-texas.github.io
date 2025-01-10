@@ -1,0 +1,9 @@
+.Reservation {
+    width: calc(100% - 16px);
+    height: calc(100vh - 128px);
+    padding: 16px 8px;
+}
+
+.Reservation h1 {
+    font-size: 2.75rem;
+}
