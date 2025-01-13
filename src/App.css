@@ -38,6 +38,7 @@
 
 .surface-container {
   background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface-container)
 }
 .primary-container {
   background-color: var(--md-sys-color-primary);
@@ -48,8 +49,16 @@
   padding: 8px 0;
 }
 
+.margin-8 {
+  margin: 8px;
+}
+
 .text-align-left {
   text-align: left;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .pointer {

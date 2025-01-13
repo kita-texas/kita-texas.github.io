@@ -4,6 +4,7 @@ export const CleanerPlans = [
     {
         id: "Cleaner-OneTime",
         planName: "One Time",
+        descriptions: ["Cleaning", "One Time"],
         price: "From $16/hr"
     },
     {

@@ -1,18 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import './Reservation.css'
 import { useLocation } from "react-router-dom";
+import { CleanerPlans } from "../Pricing/PlanList";
 
 function Reservation() {
     console.log("zipcode")
 
     const location = useLocation();
-    const zipCode = location.state?.zipCode;
+    // eslint-disable-next-line
+    const zipCode = location.state?.zipCode; 
+
+    const [selectedPlanId, setSelectedPlanId] = useState("Cleaner-OneTime");
+
+    const handlePlanSelect = (planId) => {
+        setSelectedPlanId(planId);
+    };
 
     return (
         <div className="Reservation">
             <h1 className="text-align-left secondary-color">Select Plan</h1>
             <div className="grid-row3">
-                <PlanCard planName={"Cleaning"} price={"$200/hr"} isSelected={false} />
+                {CleanerPlans.map((plan) => (
+                    <PlanCard
+                        key={plan.id}
+                        id={plan.id}
+                        planName={plan.planName}
+                        price={plan.price}
+                        descriptionList={plan.descriptions}
+                        isSelected={plan.id === selectedPlanId}
+                        onPlanClick={() => handlePlanSelect(plan.id)}
+                    />
+                ))}
             </div>
         </div>
     )
@@ -20,10 +38,17 @@ function Reservation() {
 
 export default Reservation;
 
-function PlanCard({ planName, price, isSelected }) {
+function PlanCard({ id, planName, price, descriptionList, isSelected, onPlanClick }) {
+
     return (
-        <div className={`${isSelected ? "primary-container" : "surface-container"}`}>
+        <div className={`planCard ${isSelected ? "primary-container" : "surface-container"}`} onClick={onPlanClick}>
             <h3>{planName}</h3>
+            <div className="text-align-left margin-8">
+                {descriptionList?.map((item) => (
+                    <p>{item}</p>
+                ))}
+                <h3 className="bold">{price}</h3>
+            </div>
         </div>
     )
 }
