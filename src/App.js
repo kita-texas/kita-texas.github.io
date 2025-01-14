@@ -12,7 +12,7 @@ function App() {
   return (
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <div className="App">
-          <Header />
+        <Header />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path='/plan' element={<Pricing />} />

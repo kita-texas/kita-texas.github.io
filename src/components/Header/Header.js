@@ -28,7 +28,7 @@ function Header() {
                 <a href="#/">Join as helper</a>
             </div>
             <div className="Header-sideMenu">
-                <Menu className="MenuIcon" onClick={handleIsMenuOpen} sx={{fontSize: 46}} />
+                <Menu className="MenuIcon" onClick={handleIsMenuOpen} sx={{fontSize: "46px"}} />
                 <SideMenu isOpen={isMenuOpen} onCloseClick={handleIsMenuOpen} onNavigate={(link) => onNavigate(link)} />
             </div>
         </div>

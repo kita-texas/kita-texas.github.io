@@ -10,7 +10,7 @@ function Reservation() {
     // eslint-disable-next-line
     const zipCode = location.state?.zipCode; 
 
-    const [selectedPlanId, setSelectedPlanId] = useState("Cleaner-OneTime");
+    const [selectedPlanId, setSelectedPlanId] = useState();
 
     const handlePlanSelect = (planId) => {
         setSelectedPlanId(planId);
@@ -32,6 +32,7 @@ function Reservation() {
                     />
                 ))}
             </div>
+            <button className={`${selectedPlanId ? "primary-container" : "surface-container"} continue-button`} onClick={{}}>Continue</button>
         </div>
     )
 }
@@ -41,11 +42,14 @@ export default Reservation;
 function PlanCard({ id, planName, price, descriptionList, isSelected, onPlanClick }) {
 
     return (
-        <div className={`planCard ${isSelected ? "primary-container" : "surface-container"}`} onClick={onPlanClick}>
+        <div 
+            className={`planCard  ${isSelected ? "primary-container" : "surface-container"}`} 
+            onClick={onPlanClick}
+        >
             <h3>{planName}</h3>
             <div className="text-align-left margin-8">
                 {descriptionList?.map((item) => (
-                    <p>{item}</p>
+                    <p style={{margin: "2px"}}>{item}</p>
                 ))}
                 <h3 className="bold">{price}</h3>
             </div>

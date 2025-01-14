@@ -49,6 +49,7 @@ function Homepage() {
             <div className="full-width-container surface-container horizontal-padding-8">
                 <h1>Your Safety and Service Quality</h1>
                 <div className="how-to-steps">
+                    <span></span>
                     <HowToCard
                         icon={<SupportAgent sx={{ fontSize: "48px", color: "var(--md-sys-color-secondary)" }} />}
                         heading="Contact Lines"

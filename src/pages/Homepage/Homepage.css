@@ -54,16 +54,22 @@
 }
 
 .how-to-steps {
-    display: flex;
-    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     min-height: 200px;
 }
+@media screen and (max-width: 950px) {
+    .how-to-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .how-to-steps span {
+        display: none;
+    }
+}
 
 .how-to-card {
-    width: 25%;
-    padding: 4px 4px;
-    margin: 0 16px;
+    width: 100%;
 }
 
 .scroll-top-btn {
