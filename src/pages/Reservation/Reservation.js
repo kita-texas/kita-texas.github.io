@@ -13,7 +13,11 @@ function Reservation() {
     const [selectedPlanId, setSelectedPlanId] = useState();
 
     const handlePlanSelect = (planId) => {
-        setSelectedPlanId(planId);
+        if(selectedPlanId == planId) {
+            setSelectedPlanId(null);
+        } else {
+            setSelectedPlanId(planId);
+        }
     };
 
     return (
@@ -32,7 +36,14 @@ function Reservation() {
                     />
                 ))}
             </div>
-            <button className={`${selectedPlanId ? "primary-container" : "surface-container"} continue-button`} onClick={{}}>Continue</button>
+            <button 
+                disabled={!selectedPlanId} 
+                className={`${selectedPlanId ? "primary-container" : "surface-container"} continue-button`} 
+                style={{color: "var(--md-sys-color-on-primary"}}
+                onClick={{}}
+            >
+                Continue
+            </button>
         </div>
     )
 }

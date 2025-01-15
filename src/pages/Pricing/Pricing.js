@@ -6,19 +6,19 @@ import { CleanerPlans, TutorPlans } from './PlanList';
 function Pricing() {
     return (
         <div className="Pricing">
-            <div className="primary-container full-width-container horizontal-padding-8 centered-items">
+            <div className="primary-container full-width-container vertical-padding-8 centered-items">
                 <h1 className="montserrat-600" style={{ fontSize: "2.5rem" }}>Plans and Pricing</h1>
                 <p className="nunito-500" style={{ fontSize: "1.5rem" }}>See our various and afforable plans</p>
                 <StartBookingInputs />
             </div>
             <h1 className="text-align-left secondary-color" style={{ paddingLeft: "16px" }}>Cleaning Plans</h1>
-            <div className="full-width-container horizontal-padding-8 grid-row3">
+            <div className="full-width-container vertical-padding-8 grid-row3">
                 {
                     CleanerPlans.map((plan) => <PlanCard key={plan.id} planName={`${plan.planName}`} icon={plan.icon} price={plan.price} />)
                 }
             </div>
             <h1 className="text-align-left secondary-color" style={{ paddingLeft: "16px" }}>Tutor Plans</h1>
-            <div className="full-width-container horizontal-padding-8 grid-row3">
+            <div className="full-width-container vertical-padding-8 grid-row3">
                 {
                     TutorPlans.map((plan) => <PlanCard key={plan.id} planName={`${plan.planName}`} icon={plan.icon} backgroundColor={plan.backgroundColor} price={plan.price} />)
                 }

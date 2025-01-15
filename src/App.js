@@ -7,6 +7,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import Pricing from './pages/Pricing/Pricing.js';
 import Reservation from './pages/Reservation/Reservation.js';
+import Join from './pages/Join/Join.js';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path='/plan' element={<Pricing />} />
             <Route path='/reservation' element={<Reservation />} />
+            <Route path='/join' element={<Join />} />
           </Routes>
         </div>
       </LocalizationProvider>

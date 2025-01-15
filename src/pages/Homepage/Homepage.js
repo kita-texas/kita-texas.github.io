@@ -20,7 +20,7 @@ function Homepage() {
                     <StartBookingInputs />
                 </div>
             </div>
-            <div className="full-width-container horizontal-padding-8">
+            <div className="full-width-container vertical-padding-8">
                 <h1>How to use service</h1>
                 <div className="how-to-steps">
                     <HowToCard
@@ -46,7 +46,7 @@ function Homepage() {
                 </div>
                 <button onClick={scrollTop} className="scroll-top-btn">Start Booking</button>
             </div>
-            <div className="full-width-container surface-container horizontal-padding-8">
+            <div className="full-width-container surface-container vertical-padding-8">
                 <h1>Your Safety and Service Quality</h1>
                 <div className="how-to-steps">
                     <span></span>

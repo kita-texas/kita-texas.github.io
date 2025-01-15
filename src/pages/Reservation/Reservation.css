@@ -18,8 +18,10 @@
 
 .continue-button {
     border: none;
-    padding: 16px;
-    font-size: 1.25rem;
+    padding: 12px;
+    font-size: 1.10rem;
     border-radius: 25px;
-    background-color: var(--md-sys-color-primary);
+    position: absolute;
+    bottom: 16px;
+    right: 24px;
 }
