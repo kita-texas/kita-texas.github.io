@@ -41,7 +41,7 @@ function SideMenu({isOpen, onCloseClick, onNavigate}) {
     return (
         <div className={`Header-sideMenuContainer ${isOpen? 'open' : ''}`}>
             <Close className="closeIcon" onClick={onCloseClick} sx={{ fontSize: 46 }} />
-            <a href="#/">What we do</a>
+            <a href="#/whatwedo" onClick={() => onNavigate(`/whatwedo`)}>What we do</a>
             <a href="#/plan" onClick={() => onNavigate(`/plan`)}>Plans</a>
             <a href="#/join" onClick={() => onNavigate(`/join`)}>Join as helper</a>
         </div>

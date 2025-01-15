@@ -1,5 +1,5 @@
 import './Pricing.css';
-import { BusinessCenterOutlined } from "@mui/icons-material";
+import { BusinessCenterOutlined, InfoOutlined } from "@mui/icons-material";
 import { StartBookingInputs } from "../Homepage/Homepage";
 import { CleanerPlans, TutorPlans } from './PlanList';
 
@@ -34,7 +34,8 @@ function PlanCard({ planName, icon = <BusinessCenterOutlined sx={{ fontSize: "48
         <div className="PlanCard">
             <h4 style={{ backgroundColor: `${backgroundColor}` }} className="PlanCard-h4">{planName}</h4>
             {icon}
-            <p className="PlanCard-p nunito-600">{price}</p>
+            <p className="PlanCard-p nunito-600" style={{marginBottom: "0"}}>{price}</p>
+            <p style={{margin: "4px", fontStyle: "italic", color: "gray"}}>+fees <InfoOutlined /></p>
         </div>
     )
 

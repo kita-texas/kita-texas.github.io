@@ -69,8 +69,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  
   @media screen and (max-width: 950px) {
-      display: block
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 350px) {
+    display: block;
   }
 }
 
