@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import './Reservation.css'
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { CleanerPlans } from "../Pricing/PlanList";
 
 function Reservation() {
     console.log("zipcode")
 
     const location = useLocation();
+    const navigate = useNavigate();
+
     // eslint-disable-next-line
     const zipCode = location.state?.zipCode; 
 
@@ -19,6 +21,10 @@ function Reservation() {
             setSelectedPlanId(planId);
         }
     };
+
+    const navigateToCleanerSelect = () => {
+        navigate('/reservation/cleaner')
+    }
 
     return (
         <div className="Reservation">
@@ -40,7 +46,7 @@ function Reservation() {
                 disabled={!selectedPlanId} 
                 className={`${selectedPlanId ? "primary-container" : "surface-container"} continue-button`} 
                 style={{color: "var(--md-sys-color-on-primary"}}
-                onClick={{}}
+                onClick={navigateToCleanerSelect}
             >
                 Continue
             </button>
