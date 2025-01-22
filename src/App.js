@@ -9,6 +9,7 @@ import Pricing from './pages/Pricing/Pricing.js';
 import Reservation from './pages/Reservation/Reservation.js';
 import Join from './pages/Join/Join.js';
 import WhatWeDo from './pages/WhatWeDo/WhatWeDo.js';
+import NoPageFound from './pages/NoPageFound/NoPageFound.js';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path='/reservation' element={<Reservation />} />
             <Route path='/join' element={<Join />} />
             <Route path='/whatwedo' element={<WhatWeDo />} />
+            <Route path="*" element={<NoPageFound />} />
           </Routes>
         </div>
       </LocalizationProvider>

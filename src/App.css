@@ -78,6 +78,11 @@
   }
 }
 
+.full-fill-no-header {
+  width: 100%;
+  height: calc(100% - 96px);
+}
+
 /** fonts **/
 .montserrat-500 {
   font-family: "Montserrat", serif;
