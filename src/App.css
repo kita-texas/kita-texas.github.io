@@ -49,12 +49,20 @@
   padding: 8px 0;
 }
 
+.horizontal-padding-8 {
+  padding: 0 8px;
+}
+
 .margin-8 {
   margin: 8px;
 }
 
 .text-align-left {
   text-align: left;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .bold {
@@ -85,28 +93,28 @@
 
 /** fonts **/
 .montserrat-500 {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", Arial;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
 
 .montserrat-600 {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", Arial;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
 }
 
 .nunito-500 {
-  font-family: "Nunito", serif;
+  font-family: "Nunito", Arial;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
 
 .nunito-600 {
-  font-family: "Nunito", serif;
+  font-family: "Nunito", Arial;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
