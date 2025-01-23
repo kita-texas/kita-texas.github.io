@@ -1,0 +1,8 @@
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-text-align-left {
+    align-items: start;
+}
