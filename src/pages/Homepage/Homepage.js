@@ -16,7 +16,7 @@ function Homepage() {
         <div className="Homepage">
             <div id="Top-banner">
                 <div id="Top-banner-container">
-                    <h1>Find Truested Cleaning Near You</h1>
+                    <h1>Find Trusted Babysitters Near You</h1>
                     <StartBookingInputs />
                 </div>
             </div>

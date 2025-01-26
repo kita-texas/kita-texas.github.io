@@ -23,7 +23,7 @@ function App() {
             <Route path='/reservation' element={<Reservation />} />
             <Route path='/join' element={<Join />} />
             <Route path='/whatwedo' element={<WhatWeDo />} />
-            <Route path='login' element={<Login />} />
+            <Route path='/login' element={<Login />} />
             <Route path="*" element={<NoPageFound />} />
           </Routes>
         </div>
