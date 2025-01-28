@@ -22,7 +22,7 @@
 
 .login-input {
     width: 60%;
-    border: none;
+    font-size: 1.15rem;
     padding: 12px 8px;
     margin: 8px 0;
     border: 1.5px solid var(--md-sys-color-outline);

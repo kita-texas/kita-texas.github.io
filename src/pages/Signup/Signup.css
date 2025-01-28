@@ -1,0 +1,9 @@
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--md-sys-color-on-surface-container);
+    width: 100%;
+    height: calc(100vh - 96px);
+    background-color: var(--md-sys-color-surface-container-highest);
+}
