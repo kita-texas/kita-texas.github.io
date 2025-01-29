@@ -7,3 +7,24 @@
     height: calc(100vh - 96px);
     background-color: var(--md-sys-color-surface-container-highest);
 }
+
+.signup-container {
+    width: 100%;
+    max-width: 900px;
+    min-height: calc(100vh - 215px);
+    background-color: white;
+    border-radius: 75px 75px 0 0 ;
+    box-shadow: 0 0 8px 1px gray;
+    margin-top: 32px;
+}
+
+.signup-form {
+    padding: 0 52px;
+}
+
+.signup-input {
+    padding: 12px 8px;
+    margin: 8px 4px 8px 0;
+    border: 1.5px solid var(--md-sys-color-outline);
+    border-radius: 25px;
+}

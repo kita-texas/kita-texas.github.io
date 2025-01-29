@@ -26,7 +26,7 @@ function Header() {
                 <a href="#/">What we do</a>
                 <a href="#/plan" onClick={() => onNavigate(`/plan`)}>Pricing</a>
                 <a href="#/join">Join as helper</a>
-                <a href="#/login">Log In</a>
+                <a href="#/login">Sign Up / Log In</a>
             </div>
             <div className="Header-sideMenu">
                 <Menu className="MenuIcon" onClick={handleIsMenuOpen} sx={{fontSize: "46px"}} />
@@ -45,7 +45,7 @@ function SideMenu({isOpen, onCloseClick, onNavigate}) {
             <a href="#/whatwedo" onClick={() => onNavigate(`/whatwedo`)}>What we do</a>
             <a href="#/plan" onClick={() => onNavigate(`/plan`)}>Plans</a>
             <a href="#/join" onClick={() => onNavigate(`/join`)}>Join as helper</a>
-            <a href="#/login" onClick={() => onNavigate('/login')}>Log in</a>
+            <a href="#/login" onClick={() => onNavigate('/login')}>Sign Up / Log In</a>
         </div>
     )
 }
