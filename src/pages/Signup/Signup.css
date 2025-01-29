@@ -11,11 +11,12 @@
 .signup-container {
     width: 100%;
     max-width: 900px;
-    min-height: calc(100vh - 215px);
+    min-height: calc(100vh - 212px);
     background-color: white;
     border-radius: 75px 75px 0 0 ;
     box-shadow: 0 0 8px 1px gray;
     margin-top: 32px;
+    position: relative;
 }
 
 .signup-form {
@@ -27,4 +28,20 @@
     margin: 8px 4px 8px 0;
     border: 1.5px solid var(--md-sys-color-outline);
     border-radius: 25px;
+}
+
+.signup-button {
+    display: block;
+    width: 20%;
+    margin: 8px 16px;
+    margin-left: auto;
+
+    font-weight: bold;
+
+    border: none;
+    background-color: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    padding: 12px 8px;
+    border-radius: 50px;
+    cursor: pointer;
 }
