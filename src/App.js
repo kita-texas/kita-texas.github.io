@@ -12,6 +12,7 @@ import WhatWeDo from './pages/WhatWeDo/WhatWeDo.js';
 import NoPageFound from './pages/NoPageFound/NoPageFound.js';
 import Login from './pages/Login/Login.js';
 import Signup from './pages/Signup/Signup.js';
+import SignupAccount from './pages/Signup.account/Signup.account.js';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path='/whatwedo' element={<WhatWeDo />} />
             <Route path='/login' element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/signup/account" element={<SignupAccount />} />
             <Route path="*" element={<NoPageFound />} />
           </Routes>
         </div>

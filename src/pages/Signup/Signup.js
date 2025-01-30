@@ -8,7 +8,7 @@ function Signup() {
             <div className="signup-container text-align-left">
                 <div className="signup-form">
                     <h1>About You</h1>
-                    <form action="/login" method="GET" autoComplete="on">
+                    <form action="/signup/account" method="GET" autoComplete="on">
                         <div style={{ width: "50%", display: "inline-block" }}>
                             <label for="first_name">First Name</label>
                             <br />
