@@ -23,10 +23,10 @@ function Header() {
         <div className="Header">
             <h1 className="name pointer" onClick={() => onNavigate(`/`)}>Home Bridge</h1>
             <div className="Header-items">
-                <a href="/#">What we do</a>
-                <a href="/#/plan" onClick={() => onNavigate(`/plan`)}>Pricing</a>
-                <a href="/#/join">Join as helper</a>
-                <a href="/#/login">Sign Up / Log In</a>
+                <a href="/">What we do</a>
+                <a href="/plan" onClick={() => onNavigate(`/plan`)}>Pricing</a>
+                <a href="/join">Join as helper</a>
+                <a href="/login">Sign Up / Log In</a>
             </div>
             <div className="Header-sideMenu">
                 <Menu className="MenuIcon" onClick={handleIsMenuOpen} sx={{fontSize: "46px"}} />
@@ -42,10 +42,10 @@ function SideMenu({isOpen, onCloseClick, onNavigate}) {
     return (
         <div className={`Header-sideMenuContainer ${isOpen? 'open' : ''}`}>
             <Close className="closeIcon" onClick={onCloseClick} sx={{ fontSize: 46 }} />
-            <a href="/#/whatwedo" onClick={() => onNavigate(`/whatwedo`)}>What we do</a>
-            <a href="/#/plan" onClick={() => onNavigate(`/plan`)}>Plans</a>
-            <a href="/#/join" onClick={() => onNavigate(`/join`)}>Join as helper</a>
-            <a href="/#/login" onClick={() => onNavigate('/login')}>Sign Up / Log In</a>
+            <a href="/whatwedo" onClick={() => onNavigate(`/whatwedo`)}>What we do</a>
+            <a href="/plan" onClick={() => onNavigate(`/plan`)}>Plans</a>
+            <a href="/join" onClick={() => onNavigate(`/join`)}>Join as helper</a>
+            <a href="/login" onClick={() => onNavigate('/login')}>Sign Up / Log In</a>
         </div>
     )
 }
