@@ -1,0 +1,14 @@
+{
+    "en": {
+        "what_we_do": "What we do",
+        "pricing": "Pricing",
+        "join_as_helper": "Join as Helper",
+        "sign_up_/_log_in": "Sign Up / Log In"
+    },
+    "ja": {
+        "what_we_do": "サービス",
+        "pricing": "料金一覧",
+        "join_as_helper": "求人",
+        "sign_up_/_log_in": "登録/ログイン"
+    }
+}

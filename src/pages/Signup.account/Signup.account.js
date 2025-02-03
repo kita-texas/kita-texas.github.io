@@ -43,19 +43,7 @@ function SignupAccount() {
     )
 }
 
-const passwordTextInput = document.getElementById("password");
-const confirmTextInput = document.getElementById("re_password");
-confirmTextInput.addEventListener('blur', function(event) {
-    const passwordValue = passwordTextInput.value;
-    const confirmValue = confirmTextInput.value;
 
-    if(passwordValue === confirmValue) {
-        console.log("same value" )
-    } else {
-        console.log("different value");
-        confirmTextInput.style.borderColor = 'var(--md-sys-color-error'
-    }
-});
 
 
 export default SignupAccount;
