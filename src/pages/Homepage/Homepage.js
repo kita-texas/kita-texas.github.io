@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Homepage.css";
 import { Search, LocationOn, PersonSearch, ContactPage, CleaningServices, SupportAgent, FitnessCenter } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; //CSS for Simple Datepicker
+import setPreferredLang from "../../components/translatePage";
+import Header from "../../components/Header/Header";
 
 function Homepage() {
+    useEffect(() => {
+        setPreferredLang();
+    }, []);
 
     const scrollTop = () => {
         document.documentElement.scrollTop = 0;
@@ -14,6 +19,7 @@ function Homepage() {
 
     return (
         <div className="Homepage">
+            <Header />
             <div id="Top-banner">
                 <div id="Top-banner-container">
                     <h1>Find Trusted Babysitters Near You</h1>

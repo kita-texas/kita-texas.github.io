@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Reservation.css'
 import { useLocation, useNavigate } from "react-router-dom";
 import { CleanerPlans } from "../Pricing/PlanList";
+import Header from "../../components/Header/Header";
+import setPreferredLang from "../../components/translatePage";
 
 function Reservation() {
     console.log("zipcode")
@@ -15,7 +17,7 @@ function Reservation() {
     const [selectedPlanId, setSelectedPlanId] = useState();
 
     const handlePlanSelect = (planId) => {
-        if(selectedPlanId == planId) {
+        if(selectedPlanId === planId) {
             setSelectedPlanId(null);
         } else {
             setSelectedPlanId(planId);
@@ -26,7 +28,13 @@ function Reservation() {
         navigate('/reservation/cleaner')
     }
 
+    useEffect(() => {
+        setPreferredLang();
+    },[]);
+
     return (
+        <div>
+            <Header />
         <div className="Reservation">
             <h1 className="text-align-left secondary-color">Select Plan</h1>
             <div className="grid-row3">
@@ -50,6 +58,7 @@ function Reservation() {
             >
                 Continue
             </button>
+        </div>
         </div>
     )
 }

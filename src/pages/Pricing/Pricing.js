@@ -2,12 +2,19 @@ import './Pricing.css';
 import { BusinessCenterOutlined, InfoOutlined } from "@mui/icons-material";
 import { StartBookingInputs } from "../Homepage/Homepage";
 import { CleanerPlans, TutorPlans } from './PlanList';
+import Header from '../../components/Header/Header';
+import { useEffect } from 'react';
+import setPreferredLang from '../../components/translatePage';
 
 function Pricing() {
+    useEffect(() => {
+        setPreferredLang();
+    }, []);
     return (
         <div className="Pricing">
+            <Header />
             <div className="primary-container full-width-container vertical-padding-8 centered-items">
-                <h1 className="montserrat-600" style={{ fontSize: "2.5rem" }}>Plans and Pricing</h1>
+                <h1 className="montserrat-600" style={{ fontSize: "2.5rem" }} >Plans and Pricing</h1>
                 <p className="nunito-500" style={{ fontSize: "1.5rem" }}>See our various and afforable plans</p>
                 <StartBookingInputs />
             </div>

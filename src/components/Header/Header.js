@@ -44,7 +44,7 @@ export default Header;
 function SideMenu({ isOpen, onCloseClick, onNavigate }) {
     return (
         <div className={`Header-sideMenuContainer ${isOpen ? 'open' : ''}`}>
-            <Close className="closeIcon" onClick={onCloseClick} sx={{ fontSize: 46 }} />
+            <Close className="closeIcon" onClick={onCloseClick} sx={{ fontSize: 46, margin: "8px", marginLeft: "auto" }} />
             <a data-translate="what_we_do" href="/whatwedo" onClick={() => onNavigate(`/whatwedo`)}>What we do</a>
             <a data-translate="pricing" href="/plan" onClick={() => onNavigate(`/plan`)}>Plans</a>
             <a data-translate="join_as_helper" href="/join" onClick={() => onNavigate(`/join`)}>Join as helper</a>
